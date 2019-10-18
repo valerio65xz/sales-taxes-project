@@ -18,7 +18,7 @@ class Loader {
         this.path = path;
     }
 
-    //Metodo per processare l'input e creare l'array totale degli input
+    //Metodo per processare l'input e creare l'array totale degli input.
     ArrayList<Input> loadInputs(){
         ArrayList<Input> inputs = new ArrayList<>();
 
