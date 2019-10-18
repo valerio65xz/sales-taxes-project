@@ -1,0 +1,19 @@
+Input 1:
+2 water crates at 2.49
+2 DVD films at 24.99
+3 fruit chests at 3.85
+
+Input 2:
+1 imported box of chocolates at 10.00
+1 imported bottle of perfume at 47.50
+
+Input 3:
+1 imported bottle of perfume at 27.99
+1 bottle of perfume at 18.99
+1 packet of headache pills at 9.75
+3 box of imported chocolates at 11.25
+
+Input 4:
+4 imported ebooks at 11.99
+10 packs of pasta at 0.99
+3 cervical ointment tubes at 9.75
