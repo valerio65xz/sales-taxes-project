@@ -27,3 +27,11 @@ Tutti gli attributi sono calcolati e assegnati nel costruttore, che prende in in
 ### Loader
 La classe Loader mi consente di caricare un file di testo contenente i vari input, e generare l'ArrayList finale di Input sulla quale dovrò poi generare il mio output. 
 L'oggetto *loader* viene instanziato nel *main()* passando il path relativo del file da caricare. Successivamente, il metodo *loadInputs()* processerà tutto il file di testo generando i vari beni relativi ad un input (tramite la chiamata al metodo *createGood()*), e poi salverà tutti gli input in un ArrayList<Input> che verrà restituito al *main()*.
+  
+### SalesTaxes
+Infine abbiamo la classe principale. Ho implementato in aggiunta un menù per poter selezionare più file di testo con il metodo *chooseInputFile()*, nel caso si hanno a disposizione più liste della spesa.
+Nel costruttore è implementata tutto il resto. Semplicemente si calcolano i vari input tramite il metodo della classe Loader, e poi si stampa l'output formattato come da consegna.
+
+## Avvio del programma
+Se si possiede l'IDE IntelliJ basta semplicemente, una volta nella schermata principale, selezionare "Check out from Version Control" -> "GIT" e clonare dal link github, aprire la classe SalesTaxes nell'area a sinistra e premere la freccia verde accanto la sua dichiarazione.
+Se si volesse lanciare il programma manualmente tramite console, si dovrebbero solo modificare i percorsi relativi per prelevare il file di testo e poi lanciare manualmente con il comando Java.
