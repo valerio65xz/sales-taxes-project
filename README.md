@@ -35,4 +35,8 @@ Nel costruttore è implementato tutto il resto. Semplicemente si calcolano i var
 
 ## Avvio del programma
 Se si possiede l'IDE IntelliJ basta semplicemente, una volta nella schermata principale, selezionare "Check out from Version Control" -> "GIT" e clonare dal link github, aprire la classe SalesTaxes nell'area a sinistra e premere la freccia verde accanto la sua dichiarazione.
-Se si volesse lanciare il programma manualmente tramite console, si dovrebbero solo modificare i percorsi relativi per prelevare il file di testo (nel metodo *SalesTaxes.chooseInputFile()*) e poi lanciare il programma manualmente con il comando Java.
+
+Se si volesse lanciare il programma manualmente tramite Windows CMD, i passaggi per la modifica sono i seguenti:
+- Spostare la cartella "input" dentro la cartella SalesTaxes, dove risiedono i file sorgente
+- Compilare tramite comando "javac -d . Good.java Input.java Loader.java SalesTaxes.java"
+- Eseguire tramite comando "java com.xpeppers.salestaxes.SalesTaxes"
