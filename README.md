@@ -1,11 +1,29 @@
 # My implementation of Sales Taxes Problem
 Il progetto è stato sviluppato in linguaggio Java, mediante l'IDE IntelliJ.
 
+## Struttura
 Il progetto è sviluppato in 4 classi.
 
-## Good
-
+### Good
 Classe che rappresenta un bene. In esso vengono definiti 6 attributi: 
-  - 
+- **name**: il nome dell'oggetto;
+- **quantity**: la quantità dell'oggetto;
+- **price**: il prezzo del singolo oggetto;
+- **tax**: la tassa totale del bene (quindi già calcolata su quanti sono gli oggetti);
+- **isTaxFreeGood**: un flag che identifica un bene esenteasse (quindi libri, cibo e medicine);
+- **isImported**: un flag che identifica un bene importato.
 
-Inoltre vi sono 2 flag *isTaxFreeGood* per indicare un bene esentasse (quindi libri, cibo e medicine) oppure *isImported* per identificare se è un bene importato. A seconda dei flag, il metodo *calculateTax* calcolerà
+Tramite il metodo *calculateTax()* calcolo la tassa totale del bene verificando i 4 casi possibili dati dalle combinazioni dei due flag.
+Inoltre il metodo *customRound()* mi consente di approssimare il risultato del calcolo della tassa allo 0.05 più vicino in eccesso. 
+
+### Input
+Classe che rappresenta una lista di bene sulla quale calcolare l'importo totale. In Input troviamo:
+- **goods**: l'ArrayList di beni che un input possiede;
+- **totalTaxes**: la somma delle tasse totali dei beni dell'input;
+- **inputTotal**: l'importo totale dell'input.
+
+Tutti gli attributi sono calcolati e assegnati nel costruttore, che prende in input l'ArrayList *goods*.
+
+### Loader
+La classe Loader mi consente di caricare un file di testo contenente i vari input, e generare l'ArrayList finale di Input sulla quale dovrò poi generare il mio output. 
+L'oggetto *loader* viene instanziato nel *main()* passando il path relativo del file da caricare. Successivamente, il metodo *loadInputs()* processerà tutto il file di testo generando i vari beni relativi ad un input (tramite la chiamata al metodo *createGood()*), e poi salverà tutti gli input in un ArrayList<Input> che verrà restituito al *main()*.
