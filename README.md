@@ -41,4 +41,4 @@ Se si volesse lanciare il programma manualmente tramite Windows CMD, i passaggi 
 - Compilare tramite comando "javac -d . Good.java Input.java Loader.java SalesTaxes.java";
 - Eseguire tramite comando "java com.xpeppers.salestaxes.SalesTaxes".
 
-Tramite altri IDE potrebbero esserci procedure simili ad IntelliJ, ma non ho testato personalmente.
+Tramite altri IDE potrebbero esserci procedure simili ad IntelliJ, o comunque tramite altri sistemi operativi possono esserci procedure simili all'apporccio manuale su Windows, ma non ho testato personalmente.
