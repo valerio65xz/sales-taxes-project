@@ -37,6 +37,7 @@ Nel costruttore è implementato tutto il resto. Semplicemente si calcolano i var
 Se si possiede l'IDE IntelliJ basta semplicemente, una volta nella schermata principale, selezionare "Check out from Version Control" -> "GIT" e clonare dal link github, aprire la classe SalesTaxes nell'area a sinistra e premere la freccia verde accanto la sua dichiarazione.
 
 Se si volesse lanciare il programma manualmente tramite Windows CMD, i passaggi per la modifica sono i seguenti:
+- Scaricare l'archivio ZIP da Github ed estrarlo;
 - Copiare la cartella "input" dentro la cartella SalesTaxes, dove risiedono i file sorgente;
 - Compilare tramite comando "javac -d . Good.java Input.java Loader.java SalesTaxes.java";
 - Eseguire tramite comando "java com.xpeppers.salestaxes.SalesTaxes".
