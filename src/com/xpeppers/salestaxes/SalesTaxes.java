@@ -13,34 +13,31 @@ import java.util.stream.Stream;
 public class SalesTaxes {
 
     private SalesTaxes(){
-
         //Creo l'ArrayList dei beni che processerò dall'input
         ArrayList<Input> inputs;
 
-        //Carico il file di input, lo tokenizzo, e ritorno l'input tokenizzato
+        //Carico il file di input, lo do' in pasto a Loader e ritorno l'ArrayList degli input
         Loader loader = new Loader(chooseInputFile());
         inputs = loader.loadInputs();
         System.out.println();
 
-        //Genero gli output (uso un Locale.US per stampare il punto invece che la , per i decimali)
+        //Genero gli output formattati (uso un Locale.US per stampare il punto invece che la , per i decimali)
         for(int i=0; i<inputs.size(); i++){
             Input input = inputs.get(i);
             System.out.println("Output "+(i+1)+":");
+
             for (Good good : input.getGoods()){
                 double finalPrice = (good.getQuantity()*good.getPrice()+good.getTax());
-
-                //Faccio sempre quel famoso aggiustamento (vedere Good.calculateTax())
-                finalPrice = Math.round(finalPrice * 100);
-                finalPrice = finalPrice / 100;
                 System.out.print(String.format(java.util.Locale.US, "%d %s: %.2f\n",good.getQuantity(), good.getName(), finalPrice));
             }
+
             System.out.print(String.format(java.util.Locale.US, "Sales Taxes: %.2f\n", input.getTotalTaxes()));
             System.out.print(String.format(java.util.Locale.US, "Total: %.2f\n", input.getInputTotal()));
             System.out.println();
         }
     }
 
-    //Menu per selezionare i file di test
+    //Menu per selezionare il file di input
     private String chooseInputFile(){
         List<String> fileList;
         String[] files = null;

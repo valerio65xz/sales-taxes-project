@@ -36,17 +36,4 @@ public class Input {
         return inputTotal;
     }
 
-    //ONLY FOR DEBUG
-    void printAllGoods(){
-        for (Good good : goods){
-            System.out.println("Name: "+good.getName());
-            System.out.println("Quantity: "+good.getQuantity());
-            System.out.println("Price: "+good.getPrice());
-            System.out.println("Tax: "+good.getTax());
-            System.out.println("isImported: "+good.isImported());
-            System.out.println("isTaxFree: "+good.isTaxFreeGood());
-            System.out.println();
-        }
-    }
-
 }

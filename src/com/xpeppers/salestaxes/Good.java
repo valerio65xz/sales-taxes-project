@@ -20,7 +20,6 @@ class Good {
 
     //Metodo per calcolare le tasse a seconda dei 4 casi possibili
     private void calculateTax(){
-
         if (isTaxFreeGood){
             if (isImported){
                 tax = customRound(0.05*price)*quantity;

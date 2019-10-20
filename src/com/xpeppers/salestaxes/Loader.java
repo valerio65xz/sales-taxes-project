@@ -8,8 +8,9 @@ import java.util.StringTokenizer;
 
 class Loader {
 
-    //Questi array mi consentono di individuare alcuni campi di prodotti
     private String path;
+
+    //Questi array mi consentono di individuare il genere del bene per alcune keywords prestabilite
     private String[] foods = {"chocolate", "pasta", "fruit", "cheese", "water"};
     private String[] medicalProducts = {"pill", "medical patch", "ointment", "syringe"};
     private String[] books = {"book", "ebook"};
@@ -28,7 +29,7 @@ class Loader {
         try {
             scanner = new Scanner(new File(path));
 
-            //Salto la prima riga di "Input 1:"
+            //Salto la prima riga ("Input 1:")
             String line = scanner.nextLine();
 
             //Scorro finché ho righe da leggere
@@ -65,7 +66,6 @@ class Loader {
         }
 
         return inputs;
-
     }
 
     //Mi crea un bene per aggiungerlo all'ArrayList dell'input
@@ -119,7 +119,6 @@ class Loader {
 
         //Ritorno il bene creato
         return new Good(name, quantity, price, isTaxFreeGood, isImported);
-
     }
 
 }
