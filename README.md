@@ -5,7 +5,7 @@ Il progetto è stato sviluppato in linguaggio Java, mediante l'IDE IntelliJ.
 Il progetto è sviluppato in 4 classi.
 
 ### Good
-Classe che rappresenta un bene. In esso vengono definiti 6 attributi: 
+Classe che rappresenta un bene. In essa vengono definiti 6 attributi: 
 - **name**: il nome del bene;
 - **quantity**: la quantità di oggetti di quel bene;
 - **price**: il prezzo del singolo oggetto;
