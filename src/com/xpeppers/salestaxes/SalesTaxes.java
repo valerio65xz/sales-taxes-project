@@ -41,7 +41,7 @@ public class SalesTaxes {
     private String chooseInputFile(){
         List<String> fileList;
         String[] files = null;
-        System.out.println("Scegliere il file da caricare: ");
+        System.out.println("Scegliere il file da caricare selezionando il suo numero: ");
         System.out.println();
         try (Stream<Path> walk = Files.walk(Paths.get("input"))) {
 
