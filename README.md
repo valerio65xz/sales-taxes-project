@@ -26,7 +26,7 @@ Tutti gli attributi sono calcolati e assegnati nel costruttore, che prende in in
 
 ### Loader
 La classe Loader mi consente di caricare un file di testo contenente i vari input, e generare l'ArrayList finale di Input sulla quale dovrò poi generare il mio output. 
-L'oggetto *loader* viene instanziato nel *main()* passando il path relativo del file da caricare. Successivamente, il metodo *loadInputs()* processerà tutto il file di testo generando i vari beni relativi ad un input (tramite la chiamata al metodo *createGood()*), e poi salverà tutti gli input in un ArrayList<Input> che verrà restituito al *main()*.
+L'oggetto *loader* viene instanziato nel *main()* della classe SalesTaxes, passando il path relativo del file da caricare. Successivamente, il metodo *loadInputs()* processerà tutto il file di testo generando i vari beni relativi ad un input (tramite la chiamata al metodo *createGood()*), e poi salverà tutti gli input in un ArrayList<Input> che verrà restituito al *main()*.
 Ogni bene viene riconosciuto tramite degli array statici che contengono delle parole riguardanti cibo, libri e medicine. Inoltre viene anche riconosciuto se un bene è importato o meno, consentendo di settare i 2 flag relativi per il calcolo corretto delle tasse da applicare.
   
 ### SalesTaxes
