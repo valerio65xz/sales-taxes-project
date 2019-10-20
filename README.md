@@ -34,12 +34,12 @@ Infine abbiamo la classe principale. Ho implementato in aggiunta un menù per po
 Nel costruttore è implementato tutto il resto. Semplicemente si calcolano i vari input tramite il metodo della classe Loader, e poi si stampa l'output formattato come da consegna.
 
 ## Avvio del programma
-Se si possiede l'IDE IntelliJ basta semplicemente, una volta nella schermata principale, selezionare "Check out from Version Control" -> "GIT" e clonare dal link github, aprire la classe SalesTaxes nell'area a sinistra e premere la freccia verde accanto la sua dichiarazione.
+Se si possiede l'IDE IntelliJ basta semplicemente, una volta nella schermata principale, selezionare "Check out from Version Control" -> "GIT" e clonare dal link github. Una volta caricato il progetto bisogna aprire la classe SalesTaxes nell'area a sinistra e premere la freccia verde accanto la sua dichiarazione.
 
-Se si volesse lanciare il programma manualmente tramite Windows CMD, i passaggi per la modifica sono i seguenti:
+Se si volesse lanciare il programma manualmente tramite Windows CMD, i passaggi sono i seguenti:
 - Scaricare l'archivio ZIP da Github ed estrarlo;
 - Copiare la cartella "input" dentro la cartella SalesTaxes, dove risiedono i file sorgente;
-- Compilare tramite comando "javac -d . Good.java Input.java Loader.java SalesTaxes.java";
-- Eseguire tramite comando "java com.xpeppers.salestaxes.SalesTaxes".
+- Lanciare una finestra di prompt nel path dei file sorgente e compilare tramite comando "javac -d . Good.java Input.java Loader.java SalesTaxes.java";
+- Eseguire tramite il comando "java com.xpeppers.salestaxes.SalesTaxes".
 
 Tramite altri IDE potrebbero esserci procedure simili ad IntelliJ, o comunque tramite altri sistemi operativi possono esserci procedure simili all'apporccio manuale su Windows, ma non ho testato personalmente.
