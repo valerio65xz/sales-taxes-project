@@ -31,7 +31,7 @@ Ogni bene viene riconosciuto tramite degli array statici che contengono delle pa
   
 ### SalesTaxes
 Infine abbiamo la classe principale. Ho implementato in aggiunta un menù per poter selezionare più file di testo con il metodo *chooseInputFile()*, nel caso si hanno a disposizione più liste della spesa.
-Nel costruttore è implementato tutto il resto. Semplicemente si calcolano i vari input tramite il metodo della classe Loader, e poi si stampa l'output formattato come da consegna.
+Nel costruttore è implementato tutto il resto: semplicemente si calcolano i vari input tramite il metodo della classe Loader, e poi si stampa l'output formattato come da consegna.
 
 ## Avvio del programma
 Se si possiede l'IDE IntelliJ basta semplicemente, una volta nella schermata principale, selezionare "Check out from Version Control" -> "GIT" e clonare dal link github. Una volta caricato il progetto bisogna aprire la classe SalesTaxes nell'area a sinistra e premere la freccia verde accanto la sua dichiarazione.
