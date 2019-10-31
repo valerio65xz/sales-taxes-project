@@ -10,11 +10,6 @@ class Loader {
 
     private String path;
 
-    //Questi array mi consentono di individuare il genere del bene per alcune keywords prestabilite
-    private String[] foods = {"chocolate", "pasta", "fruit", "cheese", "water"};
-    private String[] medicalProducts = {"pill", "medical patch", "ointment", "syringe"};
-    private String[] books = {"book", "ebook"};
-
     Loader(String path){
         this.path = path;
     }
@@ -95,30 +90,8 @@ class Loader {
             }
             price = Double.parseDouble(stringTokenizer.nextToken());
 
-            //In questo modo stabilisco, date 3 liste di elementi per cibi, medicine e libri, se è un bene esentasse
-            for (String food : foods){
-                if (name.contains(food)) {
-                    isTaxFreeGood = true;
-                    break;
-                }
-            }
-            for (String medicalProduct : medicalProducts){
-                if (name.contains(medicalProduct)) {
-                    isTaxFreeGood = true;
-                    break;
-                }
-            }
-            for (String book : books){
-                if (name.contains(book)) {
-                    isTaxFreeGood = true;
-                    break;
-                }
-            }
-
-
-            isTaxFreeGood = isFreeTaxGoodMethod(name, foods);
-            isTaxFreeGood = isFreeTaxGoodMethod(name, medicalProducts);
-            isTaxFreeGood = isFreeTaxGoodMethod(name, books);
+            //Controllo se il bene è esentasse
+            isTaxFreeGood = isFreeTaxGoodMethod(name);
 
         }
 
@@ -126,13 +99,33 @@ class Loader {
         return new Good(name, quantity, price, isTaxFreeGood, isImported);
     }
 
-    private boolean isFreeTaxGoodMethod(String name, String[] array){
-        for (String token : array){
-            if (name.contains(token)) {
-                return true;
+    private boolean isFreeTaxGoodMethod(String name){
+        Scanner scanner;
+        String line;
+        StringTokenizer stringTokenizer;
+        String token;
+        boolean result = false;
+
+        try{
+            scanner = new Scanner(new File("goods\\goods.txt"));
+            while ((scanner.hasNextLine()) && (!result)){
+                line = scanner.nextLine();
+                stringTokenizer = new StringTokenizer(line);
+                while ((stringTokenizer.hasMoreTokens()) && (!result)){
+                    token = stringTokenizer.nextToken();
+                    if (name.contains(token)){
+                        result = true;
+                    }
+
+                }
             }
+            scanner.close();
         }
-        return false;
+        catch (FileNotFoundException e){
+            e.printStackTrace();
+        }
+
+        return result;
     }
 
 }
