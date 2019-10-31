@@ -27,7 +27,8 @@ Tutti gli attributi sono calcolati e assegnati nel costruttore, che prende in in
 ### Loader
 La classe Loader mi consente di caricare un file di testo contenente i vari input, e generare l'ArrayList finale di Input sulla quale dovrò poi generare il mio output. 
 L'oggetto *loader* viene instanziato nel *main()* della classe SalesTaxes, passando il path relativo del file da caricare. Successivamente, il metodo *loadInputs()* processerà tutto il file di testo generando i vari beni relativi ad un input (tramite la chiamata al metodo *createGood()*), e poi salverà tutti gli input in un ArrayList<Input> che verrà restituito al *main()*.
-Ogni bene viene riconosciuto tramite degli array statici che contengono delle parole riguardanti cibo, libri e medicine. Inoltre viene anche riconosciuto se un bene è importato o meno, consentendo di settare i 2 flag relativi per il calcolo corretto delle tasse da applicare.
+Ogni bene viene riconosciuto tramite degli array di beni esentasse, che contengono tutte le parole per cibi, libri e medicine. Tramite il metodo *isTaxFreeGoodMethod()* posso riconoscere dinamicamente se quel bene è esentasse o meno.
+A differenza degli array statici, questo mi consente di aggiungere tutti gli array e parole che voglio, evitando la duplicazione di codice che si sarebbe verificata con l'approccio statico.
   
 ### SalesTaxes
 Infine abbiamo la classe principale. Ho implementato in aggiunta un menù per poter selezionare più file di testo con il metodo *chooseInputFile()*, nel caso si hanno a disposizione più liste della spesa.
@@ -38,7 +39,7 @@ Se si possiede l'IDE IntelliJ basta semplicemente, una volta nella schermata pri
 
 Se si volesse lanciare il programma manualmente tramite Windows CMD, i passaggi sono i seguenti:
 - Scaricare l'archivio ZIP da Github ed estrarlo;
-- Copiare la cartella "input" dentro la cartella SalesTaxes, dove risiedono i file sorgente;
+- Copiare le cartelle "input" e "goods"dentro la cartella SalesTaxes, dove risiedono i file sorgente;
 - Lanciare una finestra di prompt nel path dei file sorgente e compilare tramite comando "javac -d . Good.java Input.java Loader.java SalesTaxes.java";
 - Eseguire tramite il comando "java com.xpeppers.salestaxes.SalesTaxes".
 
