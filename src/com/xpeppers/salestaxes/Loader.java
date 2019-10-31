@@ -115,10 +115,24 @@ class Loader {
                 }
             }
 
+
+            isTaxFreeGood = isFreeTaxGoodMethod(name, foods);
+            isTaxFreeGood = isFreeTaxGoodMethod(name, medicalProducts);
+            isTaxFreeGood = isFreeTaxGoodMethod(name, books);
+
         }
 
         //Ritorno il bene creato
         return new Good(name, quantity, price, isTaxFreeGood, isImported);
+    }
+
+    private boolean isFreeTaxGoodMethod(String name, String[] array){
+        for (String token : array){
+            if (name.contains(token)) {
+                return true;
+            }
+        }
+        return false;
     }
 
 }
